@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>State → IP Lookup (US)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>State → IP Lookup</h1>
+      <p class="muted">Type state code (e.g. <code>TX</code>) or full state name (e.g. <em>Texas</em>)</p>
+    </header>
+
+    <section class="search">
+      <input id="q" placeholder="Enter state code or full name" aria-label="State search" />
+      <button id="searchBtn">Search</button>
+      <button id="randomBtn" title="Pick a random state">Random</button>
+    </section>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <h2 id="resTitle"></h2>
+      <p id="resBody"></p>
+      <div class="actions">
+        <button id="copyBtn">Copy IP</button>
+        <a id="downloadCsv" class="button-link" download="state_ips.csv">Download CSV</a>
+      </div>
+    </section>
+
+    <section class="all-list">
+      <h3>All mappings (click to copy)</h3>
+      <div id="list"></div>
+    </section>
+
+    <footer>
+      <small>Static client-side site. No external API calls. Ready for GitHub Pages.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
