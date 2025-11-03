@@ -1,181 +1,59 @@
-* {
+body {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: #fff;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #ff00c8, #6a00ff);
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  overflow: hidden;
-  transition: background 0.5s;
-}
-
-body.dark {
-  background: linear-gradient(135deg, #000000, #2b0058);
-  color: #fff;
+  overflow-x: hidden;
 }
 
 .container {
-  text-align: center;
-  z-index: 10;
+  margin-top: 80px;
 }
 
-.glow {
-  font-size: 4rem;
-  text-shadow: 0 0 30px #fff, 0 0 60px #ff00de, 0 0 90px #ff00de;
-  animation: glow 2s ease-in-out infinite alternate;
+.title {
+  font-size: 2.5rem;
+  animation: bounce 2s infinite;
 }
 
-@keyframes glow {
-  from { text-shadow: 0 0 20px #fff, 0 0 40px #ff00de; }
-  to { text-shadow: 0 0 40px #fff, 0 0 100px #ff00de; }
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
-.tagline {
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-}
-
-input {
-  padding: 10px 20px;
-  border-radius: 30px;
-  border: none;
-  outline: none;
-  margin-bottom: 15px;
-  font-size: 1rem;
-}
-
-button {
-  background: #ff00de;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 40px;
-  cursor: pointer;
-  box-shadow: 0 0 20px #ff00de;
-  transition: 0.3s;
-  font-size: 1rem;
-}
-
-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 40px #ff00de;
-}
-
-/* Cake Design */
-#cake {
-  position: relative;
-  width: 120px;
-  margin: 40px auto;
-}
-
-.plate {
-  width: 140px;
-  height: 20px;
-  background: #eee;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 0;
-  left: -10px;
-}
-
-.layer {
-  width: 120px;
-  height: 40px;
-  border-radius: 10px;
-  position: absolute;
-  left: 0;
-}
-
-.layer1 { background: #ff69b4; bottom: 20px; }
-.layer2 { background: #ffb6c1; bottom: 60px; }
-.layer3 { background: #fff; bottom: 100px; }
-
-.candles {
-  width: 10px;
-  height: 40px;
-  background: #ffd700;
-  position: absolute;
-  bottom: 140px;
-  left: 55px;
-  border-radius: 5px;
-}
-
-.flame {
-  width: 10px;
-  height: 15px;
-  background: orange;
-  border-radius: 50%;
-  position: absolute;
-  top: -15px;
-  left: 0;
-  animation: flicker 0.3s infinite;
-}
-
-@keyframes flicker {
-  0% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.1); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-/* Popup */
-#popup {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
+.button-group {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  z-index: 999;
+  gap: 15px;
 }
 
-.popup-content {
-  background: white;
-  color: black;
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  width: 300px;
-  box-shadow: 0 0 40px #ff00de;
+.btn, .back, button {
+  background: #ff6b6b;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.hidden {
-  display: none;
+.btn:hover, .back:hover, button:hover {
+  transform: scale(1.1);
+  background: #ff3b3b;
 }
 
-/* Balloons Canvas */
-#balloonCanvas {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
+#memeContainer img {
+  width: 250px;
+  margin: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-/* Screenshot Button */
-#screenshotBtn {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  z-index: 999;
-}
-
-/* Theme Toggle */
-.mode-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 1000;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .glow { font-size: 2.5rem; }
-  .tagline { font-size: 1rem; }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
