@@ -1,42 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>State → IP Lookup (US)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUCK YOU RAHID JAN G!</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="container">
-    <header>
-      <h1>State → IP Lookup</h1>
-      <p class="muted">Type state code (e.g. <code>TX</code>) or full state name (e.g. <em>Texas</em>)</p>
-    </header>
+  <div class="mode-toggle">
+    <button id="themeToggle">🌙</button>
+  </div>
 
-    <section class="search">
-      <input id="q" placeholder="Enter state code or full name" aria-label="State search" />
-      <button id="searchBtn">Search</button>
-      <button id="randomBtn" title="Pick a random state">Random</button>
-    </section>
+  <div class="container">
+    <h1 id="title" class="glow">FUCK YOU RAHID </h1>
+    <p class="tagline">FUCK YOU AND FUCK ALOT ✨</p>
 
-    <section id="result" class="result hidden" aria-live="polite">
-      <h2 id="resTitle"></h2>
-      <p id="resBody"></p>
-      <div class="actions">
-        <button id="copyBtn">Copy IP</button>
-        <a id="downloadCsv" class="button-link" download="state_ips.csv"></a>
+    <input type="text" id="nameInput" placeholder="Enter your name..." />
+    <button id="startBtn">StartFUCKING 🎈</button>
+
+    <div id="cake">
+      <div class="plate"></div>
+      <div class="layer layer1"></div>
+      <div class="layer layer2"></div>
+      <div class="layer layer3"></div>
+      <div class="candles">
+        <div class="flame"></div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <section class="all-list">
-      <h3>All mappings (click to copy)</h3>
-      <div id="list"></div>
-    </section>
+  <div id="popup" class="hidden">
+    <div class="popup-content">
+      <h2>RAHID KO GANDO KRNE KA TIME!</h2>
+      <p>You are the PORN star today! 🌟</p>
+      <button id="closePopup">OK!</button>
+    </div>
+  </div>
 
-    <footer>
-      <small>RAHID</small>
-    </footer>
-  </main>
+  <canvas id="balloonCanvas"></canvas>
+
+  <button id="screenshotBtn">📸 Save Greeting</button>
 
   <script src="script.js"></script>
 </body>
